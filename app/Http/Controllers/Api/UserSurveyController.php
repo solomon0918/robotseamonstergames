@@ -61,9 +61,7 @@ class UserSurveyController extends ApiController
 
                 // Is JSON
                 if($answers[0]){
-                    // $answer = json_decode($answer, true);
                     foreach ($answers as $value) {
-                        // echo $value . ', ';
                         if(!Str::contains($answer, $value)){
                             $errors = array_merge($errors, [$key => "Incorrect answer"]);
                             break;
